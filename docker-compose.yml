@@ -5,16 +5,18 @@ services:
     build: ./
     volumes:
       - ./:/House-Price-Prediction
-    
-
-  nginx:
-    build: ./nginx
     ports:
       - 3000:80
-    depends_on:
+    
+
+#   nginx:
+#     build: ./nginx
+#     ports:
+#       - 3000:80
+#     depends_on:
   
-      - python-service
-    command: nginx -g 'daemon off;'
+#       - python-service
+#     command: nginx -g 'daemon off;'
     
     
 
